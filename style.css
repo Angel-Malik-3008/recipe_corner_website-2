@@ -1,0 +1,71 @@
+
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+:root{--brown:#6b4435;--deep:#49352b;--cream:#fffaf5;--peach:#f5dfcf;--accent:#8c5743;--muted:#806b60}
+body{font-family:Arial,sans-serif;background:var(--cream);color:var(--deep);line-height:1.65}
+a{color:inherit}
+.site-header{background:var(--brown);color:#fff;padding:17px 7%;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.brand{font:bold 26px Georgia,serif;color:white;text-decoration:none}
+nav{display:flex;gap:22px;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;font-size:14px}
+nav a:hover{color:#ffd7a8}
+.hero{min-height:570px;background:linear-gradient(90deg,rgba(35,19,12,.72),rgba(35,19,12,.12)),url("https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=1800&q=90") center/cover;display:flex;align-items:center;padding:70px 9%;color:white}
+.hero-copy{max-width:650px}
+.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:bold;color:#a66d4e;margin-bottom:9px}
+.hero .eyebrow{color:#f8d7b8}
+.hero h1{font:bold clamp(42px,6vw,72px)/1.08 Georgia,serif;margin-bottom:18px}
+.hero p{font-size:18px;max-width:550px;margin-bottom:28px}
+.button-link{display:inline-block;background:#f3d3b4;color:#563626;padding:12px 25px;border-radius:30px;text-decoration:none;font-weight:bold}
+.button-link:hover{background:white}
+.intro{text-align:center;padding:55px 15px 25px}
+.intro h2,.listing-heading h1{font:bold 36px Georgia,serif;margin-bottom:8px}
+.intro p,.listing-heading>p:not(.eyebrow){color:var(--muted)}
+.dropdown-wrap{text-align:center;padding:18px 15px 25px}
+.dropdown{display:inline-block;position:relative}
+.dropdown input{position:absolute;opacity:0;pointer-events:none}
+.dropdown-button{display:inline-block;background:var(--brown);color:white;padding:12px 24px;border-radius:25px;cursor:pointer;font-weight:bold}
+.dropdown-panel{display:none;position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);width:230px;background:white;border-radius:12px;box-shadow:0 8px 24px #0002;z-index:20;overflow:hidden;text-align:left}
+.dropdown-panel a{display:block;padding:12px 16px;text-decoration:none;color:var(--deep)}
+.dropdown-panel a:hover{background:#f5e5d7}
+.dropdown input:checked~.dropdown-panel{display:block}
+.dropdown-backdrop{display:none;position:fixed;inset:0;z-index:10;cursor:default}
+.dropdown input:checked~.dropdown-backdrop{display:block}
+.dropdown-panel{z-index:12}.dropdown-button{position:relative;z-index:13}
+.category-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:22px;padding:25px 7% 65px}
+.category-tile{height:245px;position:relative;border-radius:15px;overflow:hidden;box-shadow:0 5px 16px #00000012}
+.category-tile img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.category-tile:hover img{transform:scale(1.07)}
+.category-tile a{position:absolute;inset:0;display:flex;align-items:flex-end;padding:20px;background:linear-gradient(transparent,rgba(30,16,10,.78));color:white;text-decoration:none;font:bold 26px Georgia,serif}
+.featured{padding:45px 7%;background:#f8eee5;text-align:center}
+.featured h2{font:32px Georgia,serif;margin-bottom:10px}
+.featured p{color:var(--muted)}
+.about{text-align:center;padding:60px 10%;max-width:900px;margin:auto}
+.about h2{font:bold 32px Georgia,serif;margin-bottom:12px}
+footer{background:var(--brown);color:white;text-align:center;padding:25px;margin-top:35px}
+footer a{color:#ffd7a8}
+.listing-page,.recipe-page{max-width:1200px;margin:auto;padding:35px 6% 65px}
+.back-link{display:inline-block;color:var(--accent);font-weight:bold;text-decoration:none;margin-bottom:25px}
+.listing-heading{text-align:center;padding:20px 0 35px}
+.listing-heading h1{font-size:44px}
+.count{display:inline-block;margin-top:15px;padding:6px 15px;background:#f2dfd0;border-radius:20px;color:#704634;font-size:13px}
+.recipe-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:25px}
+.recipe-card{background:white;border-radius:14px;overflow:hidden;box-shadow:0 4px 18px #00000010;transition:transform .2s}
+.recipe-card:hover{transform:translateY(-4px)}
+.card-image{display:block;height:195px;overflow:hidden}
+.card-image img{width:100%;height:100%;object-fit:cover}
+.card-body{padding:18px}
+.card-body h2{font:bold 22px Georgia,serif;margin:4px 0 7px}
+.card-body>p:not(.eyebrow){font-size:14px;color:var(--muted);min-height:45px}
+.text-link{display:inline-block;margin-top:13px;color:var(--accent);font-weight:bold;text-decoration:none}
+.text-link:hover{text-decoration:underline}
+.recipe-hero{display:grid;grid-template-columns:1.1fr 1fr;gap:35px;align-items:center;margin-bottom:35px}
+.recipe-hero img{width:100%;height:390px;object-fit:cover;border-radius:16px}
+.recipe-hero h1{font:bold clamp(36px,5vw,54px)/1.1 Georgia,serif;margin:8px 0 14px}
+.lead{font-size:18px;color:var(--muted)}
+.note{margin-top:18px;color:var(--accent);font-weight:bold;font-size:14px}
+.recipe-columns{display:grid;grid-template-columns:.8fr 1.2fr;gap:22px}
+.content-panel{background:white;border-radius:14px;padding:25px;box-shadow:0 4px 16px #0000000d}
+.content-panel h2{font:bold 25px Georgia,serif;margin-bottom:14px}
+.content-panel ul,.content-panel ol{padding-left:22px}
+.content-panel li{padding:5px 0}
+.kitchen-note{background:#f8eee5;padding:17px 20px;border-radius:10px;margin:25px 0;color:#694b3c}
+@media(max-width:700px){.hero{min-height:480px;padding:50px 7%}.hero p{font-size:16px}.recipe-hero,.recipe-columns{grid-template-columns:1fr}.recipe-hero img{height:260px}.site-header{justify-content:center;text-align:center}.listing-heading h1{font-size:36px}}
